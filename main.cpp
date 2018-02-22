@@ -40,7 +40,9 @@ int main(int argc, char *argv[]){
 			"\n(14) Can I Access that?"
 			"\n(15) Commit To The Disk"
 			"\n(16) Change Permissions"
-			"\n(17) Whatever Dup2 Does";
+			"\n(17) Whatever Dup2 Does"
+			"\n(18) Quit"
+			"\nWhat would you like to do?: ";
 			int response;
 			cin >> response;
 			cin.clear();
@@ -58,10 +60,10 @@ int main(int argc, char *argv[]){
 						allocate(false);
 						break;
 					case 4:
-						killSend(0);
+						sendSig(0);
 						break;
 					case 5:
-						killSend(SIGUSR2);
+						sendSig(SIGUSR2);
 						break;
 					case 6:
 						time();
@@ -98,6 +100,11 @@ int main(int argc, char *argv[]){
 						break;
 					case 17:
 						duplicate();
+						break;
+					case 18:
+						quittingTime = true;
+					default:
+						break;
 			}
 		}
 	}
