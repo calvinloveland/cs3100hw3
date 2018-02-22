@@ -18,7 +18,8 @@ void sigint(int signal) {
 int main(int argc, char *argv[]){
 	signal(SIGINT, sigint);
 	bool handled = false;
-	while(!quittingTime){
+	bool realQuit = false;
+	while(!realQuit){
 		if(argc == 2 && !handled){
 		}
 		else{
@@ -102,10 +103,11 @@ int main(int argc, char *argv[]){
 						duplicate();
 						break;
 					case 18:
-						quittingTime = true;
+						realQuit = true;
 					default:
 						break;
 			}
+			quittingTime = false;
 		}
 	}
 
