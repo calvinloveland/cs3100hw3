@@ -1,3 +1,6 @@
+I didn't get the report finished before the deadline. The code is all there though. For tools I used strace and htop
+I would have like to have looked into the /proc/ filesystem but I simply didn't have the time.
+
 
 0:(Division)
 htop shows one CPU at 100% used by the Assign3 process
