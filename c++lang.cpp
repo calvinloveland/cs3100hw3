@@ -8,7 +8,7 @@ void divide() {
 		while(!quittingTime && 4/2 == 2){}
 }
 void squareRoot() {
-		while(!quittingTime && sqrt(9) == 3){}
+		if(sqrt(9) == 3){}
 }
 void allocate(bool safe){
 		while(!quittingTime){
